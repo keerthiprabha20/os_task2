@@ -1,0 +1,1735 @@
+{
+ "problem": "dining-philosophers",
+ "approach": "monitor",
+ "n": 4,
+ "events": [
+  {
+   "seq": 0,
+   "t": 0.136,
+   "actor": "P0",
+   "action": "thinking",
+   "states": [
+    "THINKING",
+    "THINKING",
+    "THINKING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "meals": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "seq": 1,
+   "t": 0.136,
+   "actor": "P0",
+   "action": "hungry",
+   "states": [
+    "HUNGRY",
+    "THINKING",
+    "THINKING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "meals": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "seq": 2,
+   "t": 0.137,
+   "actor": "P0",
+   "action": "pick forks 0,1",
+   "states": [
+    "HUNGRY",
+    "THINKING",
+    "THINKING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    0,
+    null,
+    null,
+    null
+   ],
+   "meals": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "seq": 3,
+   "t": 0.137,
+   "actor": "P0",
+   "action": "eating",
+   "states": [
+    "EATING",
+    "THINKING",
+    "THINKING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    0,
+    0,
+    null,
+    null
+   ],
+   "meals": [
+    1,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "seq": 4,
+   "t": 0.255,
+   "actor": "P2",
+   "action": "thinking",
+   "states": [
+    "EATING",
+    "THINKING",
+    "THINKING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    0,
+    0,
+    null,
+    null
+   ],
+   "meals": [
+    1,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "seq": 5,
+   "t": 0.255,
+   "actor": "P2",
+   "action": "hungry",
+   "states": [
+    "EATING",
+    "THINKING",
+    "HUNGRY",
+    "THINKING"
+   ],
+   "fork_owner": [
+    0,
+    0,
+    null,
+    null
+   ],
+   "meals": [
+    1,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "seq": 6,
+   "t": 0.255,
+   "actor": "P2",
+   "action": "pick forks 2,3",
+   "states": [
+    "EATING",
+    "THINKING",
+    "HUNGRY",
+    "THINKING"
+   ],
+   "fork_owner": [
+    0,
+    0,
+    2,
+    null
+   ],
+   "meals": [
+    1,
+    0,
+    0,
+    0
+   ]
+  },
+  {
+   "seq": 7,
+   "t": 0.255,
+   "actor": "P2",
+   "action": "eating",
+   "states": [
+    "EATING",
+    "THINKING",
+    "EATING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    0,
+    0,
+    2,
+    2
+   ],
+   "meals": [
+    1,
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "seq": 8,
+   "t": 0.323,
+   "actor": "P1",
+   "action": "thinking",
+   "states": [
+    "EATING",
+    "THINKING",
+    "EATING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    0,
+    0,
+    2,
+    2
+   ],
+   "meals": [
+    1,
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "seq": 9,
+   "t": 0.339,
+   "actor": "P0",
+   "action": "put forks 0,1",
+   "states": [
+    "EATING",
+    "THINKING",
+    "EATING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    null,
+    0,
+    2,
+    2
+   ],
+   "meals": [
+    1,
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "seq": 10,
+   "t": 0.339,
+   "actor": "P0",
+   "action": "done eating",
+   "states": [
+    "THINKING",
+    "THINKING",
+    "EATING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    null,
+    null,
+    2,
+    2
+   ],
+   "meals": [
+    1,
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "seq": 11,
+   "t": 0.339,
+   "actor": "P1",
+   "action": "hungry",
+   "states": [
+    "THINKING",
+    "HUNGRY",
+    "EATING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    null,
+    null,
+    2,
+    2
+   ],
+   "meals": [
+    1,
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "seq": 12,
+   "t": 0.346,
+   "actor": "P3",
+   "action": "thinking",
+   "states": [
+    "THINKING",
+    "HUNGRY",
+    "EATING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    null,
+    null,
+    2,
+    2
+   ],
+   "meals": [
+    1,
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "seq": 13,
+   "t": 0.346,
+   "actor": "P3",
+   "action": "hungry",
+   "states": [
+    "THINKING",
+    "HUNGRY",
+    "EATING",
+    "HUNGRY"
+   ],
+   "fork_owner": [
+    null,
+    null,
+    2,
+    2
+   ],
+   "meals": [
+    1,
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "seq": 14,
+   "t": 0.522,
+   "actor": "P2",
+   "action": "put forks 2,3",
+   "states": [
+    "THINKING",
+    "HUNGRY",
+    "EATING",
+    "HUNGRY"
+   ],
+   "fork_owner": [
+    null,
+    null,
+    null,
+    2
+   ],
+   "meals": [
+    1,
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "seq": 15,
+   "t": 0.522,
+   "actor": "P2",
+   "action": "done eating",
+   "states": [
+    "THINKING",
+    "HUNGRY",
+    "THINKING",
+    "HUNGRY"
+   ],
+   "fork_owner": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "meals": [
+    1,
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "seq": 16,
+   "t": 0.522,
+   "actor": "P1",
+   "action": "pick forks 1,2",
+   "states": [
+    "THINKING",
+    "HUNGRY",
+    "THINKING",
+    "HUNGRY"
+   ],
+   "fork_owner": [
+    null,
+    1,
+    null,
+    null
+   ],
+   "meals": [
+    1,
+    0,
+    1,
+    0
+   ]
+  },
+  {
+   "seq": 17,
+   "t": 0.522,
+   "actor": "P1",
+   "action": "eating",
+   "states": [
+    "THINKING",
+    "EATING",
+    "THINKING",
+    "HUNGRY"
+   ],
+   "fork_owner": [
+    null,
+    1,
+    1,
+    null
+   ],
+   "meals": [
+    1,
+    1,
+    1,
+    0
+   ]
+  },
+  {
+   "seq": 18,
+   "t": 0.522,
+   "actor": "P3",
+   "action": "pick forks 3,0",
+   "states": [
+    "THINKING",
+    "EATING",
+    "THINKING",
+    "HUNGRY"
+   ],
+   "fork_owner": [
+    null,
+    1,
+    1,
+    3
+   ],
+   "meals": [
+    1,
+    1,
+    1,
+    0
+   ]
+  },
+  {
+   "seq": 19,
+   "t": 0.523,
+   "actor": "P3",
+   "action": "eating",
+   "states": [
+    "THINKING",
+    "EATING",
+    "THINKING",
+    "EATING"
+   ],
+   "fork_owner": [
+    3,
+    1,
+    1,
+    3
+   ],
+   "meals": [
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "seq": 20,
+   "t": 0.564,
+   "actor": "P0",
+   "action": "thinking",
+   "states": [
+    "THINKING",
+    "EATING",
+    "THINKING",
+    "EATING"
+   ],
+   "fork_owner": [
+    3,
+    1,
+    1,
+    3
+   ],
+   "meals": [
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "seq": 21,
+   "t": 0.564,
+   "actor": "P0",
+   "action": "hungry",
+   "states": [
+    "HUNGRY",
+    "EATING",
+    "THINKING",
+    "EATING"
+   ],
+   "fork_owner": [
+    3,
+    1,
+    1,
+    3
+   ],
+   "meals": [
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "seq": 22,
+   "t": 0.651,
+   "actor": "P2",
+   "action": "thinking",
+   "states": [
+    "HUNGRY",
+    "EATING",
+    "THINKING",
+    "EATING"
+   ],
+   "fork_owner": [
+    3,
+    1,
+    1,
+    3
+   ],
+   "meals": [
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "seq": 23,
+   "t": 0.651,
+   "actor": "P2",
+   "action": "hungry",
+   "states": [
+    "HUNGRY",
+    "EATING",
+    "HUNGRY",
+    "EATING"
+   ],
+   "fork_owner": [
+    3,
+    1,
+    1,
+    3
+   ],
+   "meals": [
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "seq": 24,
+   "t": 0.684,
+   "actor": "P3",
+   "action": "put forks 3,0",
+   "states": [
+    "HUNGRY",
+    "EATING",
+    "HUNGRY",
+    "EATING"
+   ],
+   "fork_owner": [
+    3,
+    1,
+    1,
+    null
+   ],
+   "meals": [
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "seq": 25,
+   "t": 0.684,
+   "actor": "P3",
+   "action": "done eating",
+   "states": [
+    "HUNGRY",
+    "EATING",
+    "HUNGRY",
+    "THINKING"
+   ],
+   "fork_owner": [
+    null,
+    1,
+    1,
+    null
+   ],
+   "meals": [
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "seq": 26,
+   "t": 0.723,
+   "actor": "P1",
+   "action": "put forks 1,2",
+   "states": [
+    "HUNGRY",
+    "EATING",
+    "HUNGRY",
+    "THINKING"
+   ],
+   "fork_owner": [
+    null,
+    null,
+    1,
+    null
+   ],
+   "meals": [
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "seq": 27,
+   "t": 0.723,
+   "actor": "P1",
+   "action": "done eating",
+   "states": [
+    "HUNGRY",
+    "THINKING",
+    "HUNGRY",
+    "THINKING"
+   ],
+   "fork_owner": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "meals": [
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "seq": 28,
+   "t": 0.723,
+   "actor": "P2",
+   "action": "pick forks 2,3",
+   "states": [
+    "HUNGRY",
+    "THINKING",
+    "HUNGRY",
+    "THINKING"
+   ],
+   "fork_owner": [
+    null,
+    null,
+    2,
+    null
+   ],
+   "meals": [
+    1,
+    1,
+    1,
+    1
+   ]
+  },
+  {
+   "seq": 29,
+   "t": 0.723,
+   "actor": "P2",
+   "action": "eating",
+   "states": [
+    "HUNGRY",
+    "THINKING",
+    "EATING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    null,
+    null,
+    2,
+    2
+   ],
+   "meals": [
+    1,
+    1,
+    2,
+    1
+   ]
+  },
+  {
+   "seq": 30,
+   "t": 0.723,
+   "actor": "P0",
+   "action": "pick forks 0,1",
+   "states": [
+    "HUNGRY",
+    "THINKING",
+    "EATING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    0,
+    null,
+    2,
+    2
+   ],
+   "meals": [
+    1,
+    1,
+    2,
+    1
+   ]
+  },
+  {
+   "seq": 31,
+   "t": 0.724,
+   "actor": "P0",
+   "action": "eating",
+   "states": [
+    "EATING",
+    "THINKING",
+    "EATING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    0,
+    0,
+    2,
+    2
+   ],
+   "meals": [
+    2,
+    1,
+    2,
+    1
+   ]
+  },
+  {
+   "seq": 32,
+   "t": 0.801,
+   "actor": "P3",
+   "action": "thinking",
+   "states": [
+    "EATING",
+    "THINKING",
+    "EATING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    0,
+    0,
+    2,
+    2
+   ],
+   "meals": [
+    2,
+    1,
+    2,
+    1
+   ]
+  },
+  {
+   "seq": 33,
+   "t": 0.801,
+   "actor": "P3",
+   "action": "hungry",
+   "states": [
+    "EATING",
+    "THINKING",
+    "EATING",
+    "HUNGRY"
+   ],
+   "fork_owner": [
+    0,
+    0,
+    2,
+    2
+   ],
+   "meals": [
+    2,
+    1,
+    2,
+    1
+   ]
+  },
+  {
+   "seq": 34,
+   "t": 0.832,
+   "actor": "P2",
+   "action": "put forks 2,3",
+   "states": [
+    "EATING",
+    "THINKING",
+    "EATING",
+    "HUNGRY"
+   ],
+   "fork_owner": [
+    0,
+    0,
+    null,
+    2
+   ],
+   "meals": [
+    2,
+    1,
+    2,
+    1
+   ]
+  },
+  {
+   "seq": 35,
+   "t": 0.832,
+   "actor": "P2",
+   "action": "done eating",
+   "states": [
+    "EATING",
+    "THINKING",
+    "THINKING",
+    "HUNGRY"
+   ],
+   "fork_owner": [
+    0,
+    0,
+    null,
+    null
+   ],
+   "meals": [
+    2,
+    1,
+    2,
+    1
+   ]
+  },
+  {
+   "seq": 36,
+   "t": 0.836,
+   "actor": "P1",
+   "action": "thinking",
+   "states": [
+    "EATING",
+    "THINKING",
+    "THINKING",
+    "HUNGRY"
+   ],
+   "fork_owner": [
+    0,
+    0,
+    null,
+    null
+   ],
+   "meals": [
+    2,
+    1,
+    2,
+    1
+   ]
+  },
+  {
+   "seq": 37,
+   "t": 0.836,
+   "actor": "P1",
+   "action": "hungry",
+   "states": [
+    "EATING",
+    "HUNGRY",
+    "THINKING",
+    "HUNGRY"
+   ],
+   "fork_owner": [
+    0,
+    0,
+    null,
+    null
+   ],
+   "meals": [
+    2,
+    1,
+    2,
+    1
+   ]
+  },
+  {
+   "seq": 38,
+   "t": 0.926,
+   "actor": "P0",
+   "action": "put forks 0,1",
+   "states": [
+    "EATING",
+    "HUNGRY",
+    "THINKING",
+    "HUNGRY"
+   ],
+   "fork_owner": [
+    null,
+    0,
+    null,
+    null
+   ],
+   "meals": [
+    2,
+    1,
+    2,
+    1
+   ]
+  },
+  {
+   "seq": 39,
+   "t": 0.927,
+   "actor": "P0",
+   "action": "done eating",
+   "states": [
+    "THINKING",
+    "HUNGRY",
+    "THINKING",
+    "HUNGRY"
+   ],
+   "fork_owner": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "meals": [
+    2,
+    1,
+    2,
+    1
+   ]
+  },
+  {
+   "seq": 40,
+   "t": 0.928,
+   "actor": "P3",
+   "action": "pick forks 3,0",
+   "states": [
+    "THINKING",
+    "HUNGRY",
+    "THINKING",
+    "HUNGRY"
+   ],
+   "fork_owner": [
+    null,
+    null,
+    null,
+    3
+   ],
+   "meals": [
+    2,
+    1,
+    2,
+    1
+   ]
+  },
+  {
+   "seq": 41,
+   "t": 0.928,
+   "actor": "P3",
+   "action": "eating",
+   "states": [
+    "THINKING",
+    "HUNGRY",
+    "THINKING",
+    "EATING"
+   ],
+   "fork_owner": [
+    3,
+    null,
+    null,
+    3
+   ],
+   "meals": [
+    2,
+    1,
+    2,
+    2
+   ]
+  },
+  {
+   "seq": 42,
+   "t": 0.928,
+   "actor": "P1",
+   "action": "pick forks 1,2",
+   "states": [
+    "THINKING",
+    "HUNGRY",
+    "THINKING",
+    "EATING"
+   ],
+   "fork_owner": [
+    3,
+    1,
+    null,
+    3
+   ],
+   "meals": [
+    2,
+    1,
+    2,
+    2
+   ]
+  },
+  {
+   "seq": 43,
+   "t": 0.928,
+   "actor": "P1",
+   "action": "eating",
+   "states": [
+    "THINKING",
+    "EATING",
+    "THINKING",
+    "EATING"
+   ],
+   "fork_owner": [
+    3,
+    1,
+    1,
+    3
+   ],
+   "meals": [
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "seq": 44,
+   "t": 1.067,
+   "actor": "P3",
+   "action": "put forks 3,0",
+   "states": [
+    "THINKING",
+    "EATING",
+    "THINKING",
+    "EATING"
+   ],
+   "fork_owner": [
+    3,
+    1,
+    1,
+    null
+   ],
+   "meals": [
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "seq": 45,
+   "t": 1.068,
+   "actor": "P3",
+   "action": "done eating",
+   "states": [
+    "THINKING",
+    "EATING",
+    "THINKING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    null,
+    1,
+    1,
+    null
+   ],
+   "meals": [
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "seq": 46,
+   "t": 1.095,
+   "actor": "P2",
+   "action": "thinking",
+   "states": [
+    "THINKING",
+    "EATING",
+    "THINKING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    null,
+    1,
+    1,
+    null
+   ],
+   "meals": [
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "seq": 47,
+   "t": 1.095,
+   "actor": "P2",
+   "action": "hungry",
+   "states": [
+    "THINKING",
+    "EATING",
+    "HUNGRY",
+    "THINKING"
+   ],
+   "fork_owner": [
+    null,
+    1,
+    1,
+    null
+   ],
+   "meals": [
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "seq": 48,
+   "t": 1.17,
+   "actor": "P1",
+   "action": "put forks 1,2",
+   "states": [
+    "THINKING",
+    "EATING",
+    "HUNGRY",
+    "THINKING"
+   ],
+   "fork_owner": [
+    null,
+    null,
+    1,
+    null
+   ],
+   "meals": [
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "seq": 49,
+   "t": 1.17,
+   "actor": "P1",
+   "action": "done eating",
+   "states": [
+    "THINKING",
+    "THINKING",
+    "HUNGRY",
+    "THINKING"
+   ],
+   "fork_owner": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "meals": [
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "seq": 50,
+   "t": 1.17,
+   "actor": "P2",
+   "action": "pick forks 2,3",
+   "states": [
+    "THINKING",
+    "THINKING",
+    "HUNGRY",
+    "THINKING"
+   ],
+   "fork_owner": [
+    null,
+    null,
+    2,
+    null
+   ],
+   "meals": [
+    2,
+    2,
+    2,
+    2
+   ]
+  },
+  {
+   "seq": 51,
+   "t": 1.17,
+   "actor": "P2",
+   "action": "eating",
+   "states": [
+    "THINKING",
+    "THINKING",
+    "EATING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    null,
+    null,
+    2,
+    2
+   ],
+   "meals": [
+    2,
+    2,
+    3,
+    2
+   ]
+  },
+  {
+   "seq": 52,
+   "t": 1.206,
+   "actor": "P0",
+   "action": "thinking",
+   "states": [
+    "THINKING",
+    "THINKING",
+    "EATING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    null,
+    null,
+    2,
+    2
+   ],
+   "meals": [
+    2,
+    2,
+    3,
+    2
+   ]
+  },
+  {
+   "seq": 53,
+   "t": 1.206,
+   "actor": "P0",
+   "action": "hungry",
+   "states": [
+    "HUNGRY",
+    "THINKING",
+    "EATING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    null,
+    null,
+    2,
+    2
+   ],
+   "meals": [
+    2,
+    2,
+    3,
+    2
+   ]
+  },
+  {
+   "seq": 54,
+   "t": 1.207,
+   "actor": "P0",
+   "action": "pick forks 0,1",
+   "states": [
+    "HUNGRY",
+    "THINKING",
+    "EATING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    0,
+    null,
+    2,
+    2
+   ],
+   "meals": [
+    2,
+    2,
+    3,
+    2
+   ]
+  },
+  {
+   "seq": 55,
+   "t": 1.207,
+   "actor": "P0",
+   "action": "eating",
+   "states": [
+    "EATING",
+    "THINKING",
+    "EATING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    0,
+    0,
+    2,
+    2
+   ],
+   "meals": [
+    3,
+    2,
+    3,
+    2
+   ]
+  },
+  {
+   "seq": 56,
+   "t": 1.243,
+   "actor": "P1",
+   "action": "thinking",
+   "states": [
+    "EATING",
+    "THINKING",
+    "EATING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    0,
+    0,
+    2,
+    2
+   ],
+   "meals": [
+    3,
+    2,
+    3,
+    2
+   ]
+  },
+  {
+   "seq": 57,
+   "t": 1.243,
+   "actor": "P1",
+   "action": "hungry",
+   "states": [
+    "EATING",
+    "HUNGRY",
+    "EATING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    0,
+    0,
+    2,
+    2
+   ],
+   "meals": [
+    3,
+    2,
+    3,
+    2
+   ]
+  },
+  {
+   "seq": 58,
+   "t": 1.275,
+   "actor": "P3",
+   "action": "thinking",
+   "states": [
+    "EATING",
+    "HUNGRY",
+    "EATING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    0,
+    0,
+    2,
+    2
+   ],
+   "meals": [
+    3,
+    2,
+    3,
+    2
+   ]
+  },
+  {
+   "seq": 59,
+   "t": 1.275,
+   "actor": "P3",
+   "action": "hungry",
+   "states": [
+    "EATING",
+    "HUNGRY",
+    "EATING",
+    "HUNGRY"
+   ],
+   "fork_owner": [
+    0,
+    0,
+    2,
+    2
+   ],
+   "meals": [
+    3,
+    2,
+    3,
+    2
+   ]
+  },
+  {
+   "seq": 60,
+   "t": 1.408,
+   "actor": "P0",
+   "action": "put forks 0,1",
+   "states": [
+    "EATING",
+    "HUNGRY",
+    "EATING",
+    "HUNGRY"
+   ],
+   "fork_owner": [
+    null,
+    0,
+    2,
+    2
+   ],
+   "meals": [
+    3,
+    2,
+    3,
+    2
+   ]
+  },
+  {
+   "seq": 61,
+   "t": 1.408,
+   "actor": "P0",
+   "action": "done eating",
+   "states": [
+    "THINKING",
+    "HUNGRY",
+    "EATING",
+    "HUNGRY"
+   ],
+   "fork_owner": [
+    null,
+    null,
+    2,
+    2
+   ],
+   "meals": [
+    3,
+    2,
+    3,
+    2
+   ]
+  },
+  {
+   "seq": 62,
+   "t": 1.455,
+   "actor": "P2",
+   "action": "put forks 2,3",
+   "states": [
+    "THINKING",
+    "HUNGRY",
+    "EATING",
+    "HUNGRY"
+   ],
+   "fork_owner": [
+    null,
+    null,
+    null,
+    2
+   ],
+   "meals": [
+    3,
+    2,
+    3,
+    2
+   ]
+  },
+  {
+   "seq": 63,
+   "t": 1.455,
+   "actor": "P2",
+   "action": "done eating",
+   "states": [
+    "THINKING",
+    "HUNGRY",
+    "THINKING",
+    "HUNGRY"
+   ],
+   "fork_owner": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "meals": [
+    3,
+    2,
+    3,
+    2
+   ]
+  },
+  {
+   "seq": 64,
+   "t": 1.455,
+   "actor": "P3",
+   "action": "pick forks 3,0",
+   "states": [
+    "THINKING",
+    "HUNGRY",
+    "THINKING",
+    "HUNGRY"
+   ],
+   "fork_owner": [
+    null,
+    null,
+    null,
+    3
+   ],
+   "meals": [
+    3,
+    2,
+    3,
+    2
+   ]
+  },
+  {
+   "seq": 65,
+   "t": 1.455,
+   "actor": "P3",
+   "action": "eating",
+   "states": [
+    "THINKING",
+    "HUNGRY",
+    "THINKING",
+    "EATING"
+   ],
+   "fork_owner": [
+    3,
+    null,
+    null,
+    3
+   ],
+   "meals": [
+    3,
+    2,
+    3,
+    3
+   ]
+  },
+  {
+   "seq": 66,
+   "t": 1.455,
+   "actor": "P1",
+   "action": "pick forks 1,2",
+   "states": [
+    "THINKING",
+    "HUNGRY",
+    "THINKING",
+    "EATING"
+   ],
+   "fork_owner": [
+    3,
+    1,
+    null,
+    3
+   ],
+   "meals": [
+    3,
+    2,
+    3,
+    3
+   ]
+  },
+  {
+   "seq": 67,
+   "t": 1.455,
+   "actor": "P1",
+   "action": "eating",
+   "states": [
+    "THINKING",
+    "EATING",
+    "THINKING",
+    "EATING"
+   ],
+   "fork_owner": [
+    3,
+    1,
+    1,
+    3
+   ],
+   "meals": [
+    3,
+    3,
+    3,
+    3
+   ]
+  },
+  {
+   "seq": 68,
+   "t": 1.597,
+   "actor": "P3",
+   "action": "put forks 3,0",
+   "states": [
+    "THINKING",
+    "EATING",
+    "THINKING",
+    "EATING"
+   ],
+   "fork_owner": [
+    3,
+    1,
+    1,
+    null
+   ],
+   "meals": [
+    3,
+    3,
+    3,
+    3
+   ]
+  },
+  {
+   "seq": 69,
+   "t": 1.597,
+   "actor": "P3",
+   "action": "done eating",
+   "states": [
+    "THINKING",
+    "EATING",
+    "THINKING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    null,
+    1,
+    1,
+    null
+   ],
+   "meals": [
+    3,
+    3,
+    3,
+    3
+   ]
+  },
+  {
+   "seq": 70,
+   "t": 1.602,
+   "actor": "P1",
+   "action": "put forks 1,2",
+   "states": [
+    "THINKING",
+    "EATING",
+    "THINKING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    null,
+    null,
+    1,
+    null
+   ],
+   "meals": [
+    3,
+    3,
+    3,
+    3
+   ]
+  },
+  {
+   "seq": 71,
+   "t": 1.602,
+   "actor": "P1",
+   "action": "done eating",
+   "states": [
+    "THINKING",
+    "THINKING",
+    "THINKING",
+    "THINKING"
+   ],
+   "fork_owner": [
+    null,
+    null,
+    null,
+    null
+   ],
+   "meals": [
+    3,
+    3,
+    3,
+    3
+   ]
+  }
+ ]
+}
